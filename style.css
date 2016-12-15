@@ -1,0 +1,108 @@
+.wraper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .wraper header {
+    display: flex; }
+    .wraper header .img {
+      text-align: center;
+      padding: 10px;
+      width: 20%; }
+    .wraper header h1 {
+      text-align: center;
+      padding-top: 40px;
+      width: 80%;
+      font-family: sans-serif;
+      font-size: 3em; }
+
+.container {
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  background-color: #d9d2e9; }
+  .container .block {
+    position: absolute;
+    left: 97%;
+    bottom: 95%;
+    opacity: 0.7; }
+  .container .menu {
+    width: 30%;
+    background-color: #cfe2f3; }
+    .container .menu li {
+      padding: 20px;
+      font-family: serif;
+      font-size: 1.5em;
+      border: 1px solid black;
+      transition: all 1s ease; }
+    .container .menu li:last-child {
+      height: 100px; }
+    .container .menu li:hover {
+      cursor: pointer;
+      background-color: #d9d2e9;
+      border-right: none; }
+    .container .menu li:hover .wraper header h1 {
+      color: aliceblue; }
+    .container .menu li:hover:last-child {
+      background-color: #cfe2f3;
+      cursor: auto; }
+  .container .content {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative; }
+    .container .content div {
+      transition: all 1s ease;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 70%;
+      height: 100%;
+      opacity: 1;
+      z-index: 6;
+      padding: 5px 25px; }
+    .container .content .hide {
+      opacity: 0;
+      z-index: 5; }
+
+.hidden {
+  display: none; }
+
+@media only screen and (max-width: 870px) {
+  .wraper {
+    width: 85%; }
+
+  .wraper header h1 {
+    font-size: 35px; }
+
+  .container .menu li {
+    padding: 2%;
+    font-size: 20px; }
+
+  .container .block img {
+    width: 40px;
+    height: auto; }
+
+  .img img {
+    width: 80%;
+    height: auto; } }
+@media only screen and (max-width: 630px) {
+  .wraper header h1 {
+    font-size: 26px; } }
+@media only screen and (max-width: 420px) {
+  .wraper header h1 {
+    font-size: 1em;
+    padding-top: 8%;
+    padding-left: 0; }
+
+  .img img {
+    width: 50px;
+    height: auto; }
+
+  .container .block img {
+    width: 20px;
+    height: auto; }
+
+  .container .menu li {
+    padding: 2%;
+    font-size: 15px; } }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+        window.onload = function () {
+            var list = document.getElementsByClassName('list');
+            var content_blocks = document.querySelectorAll('.content div');
+
+            function hideAll() {
+                content_blocks.forEach(function (block) {
+                    block.classList.add('hide');
+                })
+            }
+            for (var i = 0; i < list.length; i++) {
+                (function (item) {
+                    item.onclick = function () {
+                        var cl = +this.className.split('_')[1];
+                        hideAll();
+                        content_blocks[cl - 1].classList.remove('hide');
+                    };
+                })(list[i]);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wraper">
+        <header>
+            <div class="img"> <img src="logo.png" alt=""></div>
+
+            <h1>Frontent test, second level</h1>
+        </header>
+        <div class="container">
+            <div class="block">
+                <img src="position.png" alt="">
+            </div>
+            <ul class="menu">
+                <li class="list item_1">item1</li>
+                <li class="list item_2">item2</li>
+                <li class="list item_3">item3</li>
+                <li class="list item_4">item4</li>
+                <li class="list item_5">item5</li>
+                <li class="list item_6">item6</li>
+                <li class="list item_7">item7</li>
+                <li class="item_8"></li>
+            </ul>
+            <div class="content">
+                <div class="cont1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ea officiis fugiat quia necessitatibus obcaecati asperiores qui voluptatem nobis ullam. Tempore quia sit rerum magni quae omnis numquam, facilis deserunt.</div>
+                <div class="cont2 hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. dolor necessitatibus. Consequuntur voluptas autem obcaecati aliquid omnis, quisquam tempore quasi illo, cumque necessitatibus iste. Molestiae doloremque ullam, totam.</div>
+                <div class="cont3 hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quod, nam veniam accusamus sed sapiente ut? Incidunt eveniet minima delectus vel iste officiis totam aperiam esse ex soluta. Corporis, ea.</div>
+                <div class="cont4 hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus porro accusamus nemo modi sed est recusandae deserunt reprehenderit impedit, odio consectetur nisi, laudantium ipsa earum nobis eum, quam quisquam nostrum?</div>
+                <div class="cont5 hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quidem, eveniet delectus minus quibusdam, rem sit enim alias consectetur et, architecto. Ipsam voluptates blanditiis tempora eum pariatur dignissimos hic rerum?</div>
+                <div class="cont6 hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit cum esse aspernatur, labore adipisci ut id, ipsam, corporis veritatis repellat praesentium mollitia ea similique! Voluptates rem obcaecati laborum, saepe totam!</div>
+                <div class="cont7 hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nihil, repudiandae doloribus in architecto. Nulla deserunt consequuntur rem est, atque, similique non itaque nisi corporis quibusdam iste, praesentium impedit sit.</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
